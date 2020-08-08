@@ -34,8 +34,8 @@ public class AppController {
 	 * @return
 	 */
 	@PostMapping("/addFriend")
-	void addFriend(@RequestBody Friend friend) {
-		appService.addFriend(friend);
+	String addFriend(@RequestBody Friend friend) {
+		return appService.addFriend(friend);
 	}
 
 	/**
@@ -44,7 +44,7 @@ public class AppController {
 	 * @return
 	 */
 	@PostMapping("/addFriends")
-	void addFriend(@RequestBody List<Friend> friend) {
-		appService.addFriend(friend);
+	String addFriend(@RequestBody List<Friend> friend) {
+		return appService.addFriend(friend);
 	}
 }
